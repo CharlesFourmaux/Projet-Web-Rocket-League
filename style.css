@@ -1,0 +1,31 @@
+:root {
+	--bleu-RL:#00489F;
+	--bleu-clair:#008CDF;
+}
+
+* {
+	font-family : "Arial" ;
+	font-size : 14pt ;
+}
+
+main {
+    color : var(--bleu-RL);
+    background-color: var(--bleu-clair);
+}
+
+.topnav {
+	background-color:var(--bleu-RL);
+	height:50px;
+}
+
+.navbutton a:visited,a:link {
+	color:white;
+}
+
+.navbutton {
+	float: left;
+	height:50px;
+	width:150px;
+	text-align:center;
+	vertical-align: center;
+}
