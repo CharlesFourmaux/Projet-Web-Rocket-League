@@ -1,6 +1,7 @@
 :root {
 	--bleu-RL:#00489F;
 	--bleu-clair:#008CDF;
+	--bleu-fonce:#000B28;
 }
 
 * {
@@ -14,18 +15,30 @@ main {
 }
 
 .topnav {
-	background-color:var(--bleu-RL);
-	height:50px;
+	background-color:var(--bleu-fonce);
+	position:sticky;
+	top:0px;
+	height:65px;
 }
 
-.navbutton a:visited,a:link {
+.topnav a:visited,a:link {
+	color:gray;
+	text-decoration:none;
+}
+
+.topnav a:hover {
 	color:white;
+	background-color:var(--bleu-RL)
 }
 
-.navbutton {
+.topnav a {
 	float: left;
 	height:50px;
 	width:150px;
 	text-align:center;
-	vertical-align: center;
+	padding-top : 15px;
+}
+
+p {
+	height:400px;
 }
