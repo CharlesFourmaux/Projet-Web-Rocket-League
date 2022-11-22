@@ -9,16 +9,22 @@
 	font-size : 14pt ;
 }
 
-main {
+body {
     color : var(--bleu-RL);
-    background-color: var(--bleu-clair);
+	background-image:url("images/background.png");
 }
 
 .topnav {
 	background-color:var(--bleu-fonce);
-	position:sticky;
+	position:fixed;
+	margin:0%;
+	padding:0%;
+	display:flex;
+	justify-content: space-evenly;
 	top:0px;
-	height:65px;
+	left:0px;
+	height:10vh;
+	width:100%;
 }
 
 .topnav a:visited,a:link {
@@ -28,17 +34,80 @@ main {
 
 .topnav a:hover {
 	color:white;
-	background-color:var(--bleu-RL)
+	background-color:var(--bleu-RL);
 }
 
 .topnav a {
 	float: left;
-	height:50px;
-	width:150px;
-	text-align:center;
-	padding-top : 15px;
+	height:10vh;
+	width:12%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
 }
 
-p {
-	height:400px;
+.topnav #pageepic {
+	background-color: gold;
+	color:black;
 }
+
+.topnav #pageepic:hover {
+	color:white;
+	background-color:yellow;
+	height:10vh;
+}
+
+.topnav img {
+	float: left;
+	max-width:4%;
+	max-height:8vh;
+	width:auto;
+	height:auto;
+	margin-top:auto;
+	margin-bottom:auto;
+}
+
+main {
+	padding-top:10vh;
+	width:100%;
+}
+
+.grid {
+	height:100%;
+	width:100%;
+	display:grid;
+	grid-gap:25px;
+	grid-template-columns:1fr 3fr 1fr;
+	grid-template-rows: 10vh auto auto auto 15vh;
+	grid-template-areas:
+	"entete entete entete"
+	"sidebar contenu contenu"
+	"sidebar contenu contenu"
+	"sidebar contenu contenu"
+	"pied pied pied";
+}
+
+.grid div {
+	border-radius:25px;
+}
+
+.entete {
+	grid-area: entete;
+	background-color:var(--bleu-fonce);
+}
+
+.contenu {
+	grid-area: contenu;
+	background-color:var(--bleu-fonce);
+}
+
+.sidebar {
+	grid-area: sidebar;
+	background-color:var(--bleu-fonce);
+}
+
+.pied {
+	grid-area: pied;
+	background-color:var(--bleu-fonce);
+}
+
