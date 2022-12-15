@@ -77,8 +77,8 @@ main {
 	width:100%;
 	display:grid;
 	grid-gap:25px;
-	grid-template-columns:1fr 3fr 1fr;
-	grid-template-rows: 10vh auto auto auto 15vh;
+	grid-template-columns:2fr 4fr 1fr;
+	grid-template-rows: auto auto auto auto 15vh;
 	grid-template-areas:
 	"entete entete entete"
 	"sidebar contenu contenu"
@@ -111,3 +111,15 @@ main {
 	background-color:var(--bleu-fonce);
 }
 
+
+/* RANK */
+.grid div h1 {
+	color:white;
+	font-weight: bold;
+	text-align:center;
+}
+
+td {
+	color:white;
+	text-align:center;
+}
