@@ -12,7 +12,10 @@
 body {
     color : var(--bleu-RL);
 	background-image:url("images/background.png");
+	background-attachment: fixed;
 }
+
+/* BARRE DE NAVIGATION */
 
 .topnav {
 	background-color:var(--bleu-fonce);
@@ -27,7 +30,7 @@ body {
 	width:100%;
 }
 
-.topnav a:visited,a:link {
+.topnav a:visited,.topnav a:link {
 	color:gray;
 	text-decoration:none;
 }
@@ -45,6 +48,12 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+
+.topnav a > img {
+	max-width:10%;
+	height:auto;
+}
+
 
 .topnav #pageepic {
 	background-color: gold;
@@ -67,28 +76,286 @@ body {
 	margin-bottom:auto;
 }
 
+@media (max-width: 1100px) { /* Si l'on n'a pas assez de place pour afficher les intitulés des pages, on affiche simplement le logo en plus grand */
+	.topnav a:visited div,.topnav a:link div {
+		display:none;
+	}
+
+	.topnav a:visited img,.topnav a:link img{
+		max-width:35%;
+		height:auto;
+	}
+
+	.topnav a div {
+		font-size:auto;
+	}
+}
+
 main {
 	padding-top:10vh;
 	width:100%;
 }
 
-.grid {
-	height:100%;
-	width:100%;
-	display:grid;
-	grid-gap:25px;
-	grid-template-columns:2fr 4fr 1fr;
-	grid-template-rows: auto auto auto auto 15vh;
-	grid-template-areas:
-	"entete entete entete"
-	"sidebar contenu contenu"
-	"sidebar contenu contenu"
-	"sidebar contenu contenu"
-	"pied pied pied";
+@media (min-width: 0px) { /* Style mobile et tablette */
+
+	/* INDEX */
+	.grid_index {
+		height:100%;
+		width:100%;
+		display:grid;
+		grid-gap:25px;
+		grid-template-columns:auto;
+		grid-template-rows: auto auto auto;
+		grid-template-areas:
+		"entete"
+		"sidebar"
+		"contenu";
+	}
+
+	/* RANK */
+	.grid_rank {
+		height:100%;
+		width:100%;
+		display:grid;
+		grid-gap:25px;
+		grid-template-columns:100%;
+		grid-template-rows: auto auto auto;
+		grid-template-areas:
+		"entete"
+		"sidebar"
+		"contenu";
+	}
+
+	/* PRESENTATION */
+	.grid_presentation {
+		height:100%;
+		width:100%;
+		display:grid;
+		grid-gap:25px;
+		grid-template-columns:auto;
+		grid-template-rows: auto auto auto;
+		grid-template-areas:
+		"entete"
+		"contenu";
+	}
+
+	.grid_presentation .contenu img {
+		display:block;
+		width:50%;
+		height:auto;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	/* ECONOMIE */
+	.grid_economie {
+		height:100%;
+		width:100%;
+		display:grid;
+		grid-gap:25px;
+		grid-template-columns:auto;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+		"entete"
+		"contenu";
+	}
+
+	.grid_economie .contenu img {
+		display:block;
+		width:50%;
+		height:auto;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	/* ESPORT */
+	.grid_esport {
+		height:100%;
+		width:100%;
+		display:grid;
+		grid-gap:25px;
+		grid-template-columns:100%;
+		grid-template-rows: auto auto auto;
+		grid-template-areas:
+		"entete"
+		"sidebar"
+		"contenu";
+	}
+
+	/* ACCESSIBILITE */
+	.grid_accessibilite {
+		height:100%;
+		width:100%;
+		display:grid;
+		grid-gap:25px;
+		grid-template-columns:auto;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+		"entete"
+		"contenu";
+	}
+
+	.grid_accessibilite .contenu img {
+		display:block;
+		width:50%;
+		height:auto;
+		margin-left:auto;
+		margin-right:auto;
+	}
 }
 
-.grid div {
+@media (min-width: 1110px) { /* Pour écran d'ordinateur */
+	/* INDEX */
+	.grid_index {
+		height:100%;
+		width:100%;
+		display:grid;
+		grid-gap:25px;
+		grid-template-columns:5fr 2fr;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+		"entete entete"
+		"sidebar contenu";
+	}
+
+	/* RANK */
+	.grid_rank {
+		height:100%;
+		width:100%;
+		display:grid;
+		grid-gap:25px;
+		grid-template-columns:2fr 5fr;
+		grid-template-rows: auto auto auto;
+		grid-template-areas:
+		"entete entete"
+		"sidebar contenu"
+		". contenu";
+	}
+
+	/* PRESENTATION */
+	.grid_presentation {
+		height:100%;
+		width:100%;
+		display:grid;
+		grid-gap:25px;
+		grid-template-columns:auto;
+		grid-template-rows: auto auto auto;
+		grid-template-areas:
+		"entete"
+		"contenu";
+	}
+
+	.grid_presentation .contenu img {
+		display:block;
+		width:50%;
+		height:auto;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	/* ECONOMIE */
+	.grid_economie {
+		height:100%;
+		width:100%;
+		display:grid;
+		grid-gap:25px;
+		grid-template-columns:auto;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+		"entete"
+		"contenu";
+	}
+
+	.grid_economie .contenu img {
+		display:block;
+		width:50%;
+		height:auto;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	/* ESPORT */
+	.grid_esport {
+		height:100%;
+		width:100%;
+		display:grid;
+		grid-gap:25px;
+		grid-template-columns:auto auto;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+		"entete entete"
+		"sidebar contenu";
+	}
+
+	/* ACCESSIBILITE */
+	.grid_accessibilite {
+		height:100%;
+		width:100%;
+		display:grid;
+		grid-gap:25px;
+		grid-template-columns:auto;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+		"entete"
+		"contenu";
+	}
+
+	.grid_accessibilite .contenu img {
+		display:block;
+		width:50%;
+		height:auto;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+}
+
+/* Style appliqué à toutes les pages */
+#grid {
+	width:100%;
+	height:auto;
+}
+
+#grid div img {
+	max-width:80vw;
+	max-height:auto;
+}
+
+#grid div {
 	border-radius:25px;
+	padding:25px;
+}
+
+#grid div h1 {
+	color:white;
+	font-weight: bold;
+	text-align:center;
+}
+
+#grid div iframe {
+	display:block;
+	margin:auto;
+	min-width:500;
+	min-height:260;
+	width:auto;
+	height:auto;
+	/* width="964" height="542" */
+}
+
+#grid div h2 {
+	color:white;
+	text-decoration: underline;
+	text-align:left;
+	font-weight:lighter;
+}
+
+li a:hover, li a:visited:hover {
+	color:white;
+}
+
+li a:link, li a:visited {
+	color:gray;
+	text-decoration: none;
 }
 
 .entete {
@@ -106,20 +373,27 @@ main {
 	background-color:var(--bleu-fonce);
 }
 
-.pied {
-	grid-area: pied;
-	background-color:var(--bleu-fonce);
-}
-
-
-/* RANK */
-.grid div h1 {
-	color:white;
-	font-weight: bold;
-	text-align:center;
+table {
+	width:100%;
 }
 
 td {
 	color:white;
 	text-align:center;
 }
+
+
+/* FOOTER */
+.footer {
+	background-color:var(--bleu-fonce);
+	border-radius:25px;
+	margin-top:25px;
+	padding:0%;
+	display:flex;
+	justify-content: space-evenly;
+	top:0px;
+	left:0px;
+	height:10vh;
+	width:100%;
+}
+
